@@ -54,16 +54,16 @@ fun main() {
     //Declaração utilizando mutableListOf() - Nossa lista é mutável
     //Exemplo prático do uso de List
 
-    /*
-    val nome = mutableListOf<String>()
+
+    /*val nome = mutableListOf<String>()
 
     //Exemplo utilizando o método add()
-    /*
-    nome.add("Henrique")
+
+   /* nome.add("Henrique")
     nome.add("Rodrigo")
     nome.add("Rogério")
-    nome.add(null)
      */
+
 
     //Exemplo prático utilizando o add()
     while (true){
