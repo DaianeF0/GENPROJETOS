@@ -36,5 +36,23 @@ fun main (){
                     "itens $produto")
         }
     }
-        println("OS produtos restante que consta na lista de estoque são: $produto")
+    while (true) {
+        println("Selecione um produto de 0 a ${produto.size - 1}")
+        val pos = readLine()!!.toInt()
+
+        if (pos in 0..(produto.size - 1)) {
+            println(" Agora digite o novo produto")
+            val produto1 = readLine()!!
+
+            produto[pos] = produto1
+            break
+
+        } else {
+            println("O produto não existe")
+
+        }
+    }
+    println("OS produtos restante que consta na lista de estoque são: $produto")
 }
+
+
