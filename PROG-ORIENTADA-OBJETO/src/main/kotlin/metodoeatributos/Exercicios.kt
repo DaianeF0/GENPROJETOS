@@ -5,9 +5,9 @@ fun main (){
     informações deste objeto no console.
      */
 
-  /*  println("*** Cadastro de Cliente ***")
+   /* println("*** Cadastro de metodoeatributos.Cliente ***")
 
-    val Cliente1 = Cliente("Daiane Ferreira da Silva","Lopes Trovão",292,
+    val Cliente1 = metodoeatributos.Cliente("Daiane Ferreira da Silva","Lopes Trovão",292,
     "Taquaral","Campinas","SP","BR",13059680,987421830,"daianeferreira0","daiane@gmail.com")
 
     println(Cliente1)
@@ -18,15 +18,16 @@ fun main (){
     Cliente1.Luzes(0.0)
     Cliente1.Progressiva(0.0)
     Cliente1.total(0.0)
+    */
 
-   */
+
 
     /* 6- Crie uma classe conta bancaria e apresente os atributos e métodos referentes esta classe,
      em seguida crie um objeto conta bancaria, defina as instancias deste objeto e apresente as
      informações deste objeto no console.
      */
 
-   /* val conta = ContaBanco ("Daiane",1,50.0)
+   /* val conta = metodoeatributos.ContaBanco ("Daiane",1,50.0)
 
     println(conta)
 

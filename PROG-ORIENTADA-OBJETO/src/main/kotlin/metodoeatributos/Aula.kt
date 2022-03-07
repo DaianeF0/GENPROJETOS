@@ -1,3 +1,5 @@
+import metodoeatributos.Pessoa
+
 fun main() {
 
     /*
@@ -5,7 +7,7 @@ Declarar os atributos e métodos - abrir arquivo class
 Atributos - variaveis que nós declaramos dentro uma classe
 */
 
-   /* val Personagem1 = Pessoa()
+   /* val Personagem1 = metodoeatributos.Pessoa()
 
     Personagem1.nome = "Naruto"
     Personagem1.altura = 1.86
@@ -26,7 +28,7 @@ Atributos - variaveis que nós declaramos dentro uma classe
 
     */
 
-   /* val conta = ContaBanco ()
+   /* val conta = metodoeatributos.ContaBanco ()
 
     conta.titular = "Daiane"
     conta.tipo = 1
@@ -34,7 +36,7 @@ Atributos - variaveis que nós declaramos dentro uma classe
 
     */
 
-//Chamer os metodos da ContaBanco
+//Chamer os metodos da metodoeatributos.ContaBanco
 
    /* conta.mostrarSaldo()
 

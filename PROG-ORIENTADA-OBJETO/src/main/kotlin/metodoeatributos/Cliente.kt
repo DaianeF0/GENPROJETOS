@@ -1,4 +1,4 @@
-    //Cadastro de Cliente - Salão de Beleza
+package metodoeatributos    //Cadastro de metodoeatributos.Cliente - Salão de Beleza
     class Cliente constructor(var nomeCompleto: String,var Rua: String,var Num:Int,
                                var Bairro: String, var Cidade: String, var Estado: String,
                                var Pais: String,var Cep:Int, var Tel:Int ) {

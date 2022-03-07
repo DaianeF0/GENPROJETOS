@@ -1,4 +1,4 @@
-/*Conta de Banco
+package metodoeatributos/*Conta de Banco
     Atributos - Titular, Tipo, Saldo
     Métodos - Saque, Depósito,  Saldo, TransfEnt,TransfSai, PixEnt,PIxSai
 */

@@ -1,4 +1,6 @@
-class Pessoa constructor(var nome: String,var altura: Double){
+package metodoeatributos
+
+class Pessoa constructor(var nome: String, var altura: Double){
 
     var peso = 0.0
     var corDosOlhos = ""
