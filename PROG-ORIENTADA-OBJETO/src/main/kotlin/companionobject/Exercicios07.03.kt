@@ -15,10 +15,10 @@ de um bloco try catch.
         val cliente1 = Cliente("Daiane", "Rua Lopes Trovão", "19987421830")
         println(cliente1)
 
-        cliente1.cadProduto("Abacaxi")
-        cliente1.cadProduto("Melão")
-        cliente1.cadProduto("Mandioca")
-        cliente1.cadProduto("Goiaba")
+        cliente1.cadProduto("Abacaxi",8)
+        cliente1.cadProduto("Melão",10)
+        cliente1.cadProduto("Mandioca",6)
+        cliente1.cadProduto("Goiaba",45)
 
         println("Itens cadastrados com sucesso")
         cliente1.listasItem()

@@ -1,6 +1,6 @@
 package companionobject   //Cadastro de Cliente
 
-    class Cliente constructor(private var nome: String) {
+    data class Cliente constructor(private var nome: String) {
 
         private var endereco = ""
         private var telefone = ""
@@ -14,31 +14,26 @@ package companionobject   //Cadastro de Cliente
             this.endereco = endereco
             this.telefone = telefone
         }
-        constructor(nomeCompleto: String, endereco: String, telefone: String,
+        constructor(nome: String, endereco: String, telefone: String,
             listadeCompra:MutableList<String>): this(
-            nomeCompleto, endereco, telefone)
+            nome, endereco, telefone)
         {
             this.listadeCompra =listadeCompra
         }
        init {
-           if (nome.isEmpty() && endereco.isEmpty() && telefone.isEmpty()){
+           if (nome.isEmpty()){
                throw Exception("Classe instanciada de maneira incorreta!")
            }else{
                println("Classe instanciada com sucesso!")
            }
        }
 
-        override fun toString(): String {
-            return "\n Nome - $nome" +
-                    "\n Endereco - $endereco" +
-                    "\n Telefone - $telefone"
-        }
-
-        fun cadProduto(produto: String) {
+        fun cadProduto(produto: String,quant:Int) {
             if (produto.isEmpty()) {
-                println("Curso inválido")
+                println("Produto inválido")
             } else {
                 listadeCompra.add(produto)
+                println("Produto $produto adicionado com sucesso")
             }
         }
         fun remproduto(produto: String) {
@@ -47,12 +42,13 @@ package companionobject   //Cadastro de Cliente
                 println("Produto inválido")
             } else if (listadeCompra.contains(produto)) {
                 listadeCompra.remove(produto)
-                println("Produto removido com sucesso")
+                println("Produto $produto removido com sucesso")
             } else {
-                println("Esse produto não exite na lista")
+                println("Esse produto $produto não exite na lista")
             }
         }
         fun listasItem() {
+            println("***Compra do clinte: $nome ***")
             listadeCompra.forEach {
                 println(it)
             }
