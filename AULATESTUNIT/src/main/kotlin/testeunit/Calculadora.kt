@@ -4,8 +4,8 @@ class Calculadora {
     companion object{
 
         fun adicao (x:Double, y: Double):Double{
-            val cal = x + y
-            return cal
+
+            return x + y
         }
         fun subtracao (x:Double, y: Double):Double{
             val cal = x - y

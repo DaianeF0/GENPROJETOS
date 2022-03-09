@@ -1,31 +1,32 @@
 package testeunit
 
 import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 
-import org.junit.jupiter.api.Assertions.*
-internal class CalculadoraTest {
+internal class CalculadoraTest{
 
-@Test
-  fun adicaoTest() {
+    @Test
 
-      assertEquals(9.0,Calculadora.adicao(3.0,6.0))
-  }
+    fun adicaoTest(){
 
-  @Test
-  fun subtracaoTest() {
-      assertEquals(9.0,Calculadora.subtracao(3.0,6.0))
-  }
+        assertEquals(9.0,Calculadora.adicao(6.0,3.0))
+    }
 
-  @Test
-  fun multiplicacaoTest() {
+    @Test
+    fun subtracaoTest(){
 
-      assertEquals(9.0,Calculadora.multiplicacao(18.0,9.0))
-  }
+        assertEquals(9.0,Calculadora.subtracao(18.0,9.0))
+    }
 
-  @Test
-  fun divisaoTest() {
-      assertEquals(9.0,Calculadora.divisao(81.0,9.0))
-  }
+    @Test
+    fun multiplicacaoTest(){
 
+        assertEquals(9.0,Calculadora.multiplicacao(3.0,3.0))
+    }
 
+    @Test
+    fun divisaoTest(){
+
+        assertEquals(9.0,Calculadora.divisao(81.0,9.0))
+    }
 }
