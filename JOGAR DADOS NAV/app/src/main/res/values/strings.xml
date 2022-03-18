@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JOGAR DADOS NAV</string>
+    <string name="JOGAR">JOGAR</string>
+    <string name="VOLTAR">VOLTAR</string>
+    <string name="D6">Dados 6</string>
+    <string name="D12">Dados 12</string>
+    <string name="D20">Dados 20</string>
+
+</resources>

@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         val resul = (1..lados).random()
         //Deixe somente a imagem para visualizar os números
-        /*val text1 = findViewById<TextView>(R.id.text1)
+        val text1 = findViewById<TextView>(R.id.text1)
         text1.text = resul.toString()
-         */
+
         val imageResource = NumD20(resul)
         val imageNum = findViewById<ImageView>(R.id.imageNum)
         imageNum.setImageResource(imageResource)
