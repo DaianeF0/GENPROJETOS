@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">JDADOSACT</string>
+    <string name="escolha_o_seu_dado">ESCOLHA O DADO</string>
+    <string name="dado_6">DADO 6</string>
+    <string name="dado_12">DADO 12</string>
+    <string name="dado_20">DADO 20</string>
+    <string name="todo">TODO</string>
+    <string name="jogar">JOGAR</string>
+    <string name="voltar">VOLTAR</string>
 </resources>
