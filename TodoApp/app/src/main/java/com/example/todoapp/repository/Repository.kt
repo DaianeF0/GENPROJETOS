@@ -18,4 +18,9 @@ class Repository {
     suspend fun listTarefas () : Response<List<Tarefa>> {
         return RetrofitInstance.api.listTarefas()
     }
+
+    suspend fun updateTarefa (tarefa: Tarefa) : Response<Tarefa> {
+        return RetrofitInstance.api.updateTarefa(tarefa)}
+
+
 }

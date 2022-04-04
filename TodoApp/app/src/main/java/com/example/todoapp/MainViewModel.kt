@@ -34,6 +34,8 @@ class MainViewModel @Inject constructor(
 
     val dataSelecionada = MutableLiveData<LocalDate>()
 
+    var tarefaSelecionada: Tarefa? = null
+
     init {
 
         dataSelecionada.value = LocalDate.now()
@@ -76,6 +78,16 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    fun updateTarefa (tarefa: Tarefa){
 
+        viewModelScope.launch {
+            try {
+                repository.updateTarefa(tarefa)
+                listTarefas()
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
 
 }

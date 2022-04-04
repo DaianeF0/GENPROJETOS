@@ -26,6 +26,8 @@ class FormFragment : Fragment(),TimePickerListener {
 
     private var categoriaSelecionada = 0L
 
+    private var tarefaSelecionada: Tarefa? = null
+
     private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -36,6 +38,8 @@ class FormFragment : Fragment(),TimePickerListener {
         binding = FragmentFormBinding.inflate(
             layoutInflater, container, false
         )
+
+        carregarDados()
 
         mainViewModel.listCategoria()
 
@@ -105,9 +109,18 @@ class FormFragment : Fragment(),TimePickerListener {
         val categoria = Categoria(categoriaSelecionada,null,null)
 
         if(validarCampos(nome, desc, responsavel, data)){
-            val tarefa = Tarefa(0,nome,desc,responsavel,data,status,categoria)
 
-            mainViewModel.addTarefa(tarefa)
+            if (tarefaSelecionada == null){
+                val tarefa = Tarefa(0,nome,desc,responsavel,data,status,categoria)
+                mainViewModel.addTarefa(tarefa)
+
+            } else{
+                val tarefa = Tarefa(
+                    tarefaSelecionada?.id!!,
+                    nome,desc,responsavel,data,status,categoria)
+                mainViewModel.updateTarefa(tarefa)
+            }
+
             Toast.makeText(context,"Tarefa Salva!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_formFragment_to_listFragment)}
 
@@ -115,6 +128,27 @@ class FormFragment : Fragment(),TimePickerListener {
             Toast.makeText(context,"Preencha os campos corretamente!", Toast.LENGTH_LONG).show()
         }
 
+    }
+
+    private fun carregarDados (){
+
+        tarefaSelecionada = mainViewModel.tarefaSelecionada
+
+        if (tarefaSelecionada!= null) {
+
+        binding.editNome.setText(tarefaSelecionada?.nome)
+        binding.editDescricao.setText(tarefaSelecionada?.descricao)
+        binding.editResponsavel.setText(tarefaSelecionada?.responsavel)
+        binding.editData.setText(tarefaSelecionada?.data)
+        binding.switchAtivoCard.isChecked = tarefaSelecionada?.status!!
+
+        } else{
+
+            binding.editNome.text = null
+            binding.editDescricao.text = null
+            binding.editResponsavel.text = null
+            binding.editData.text = null
+        }
     }
 
     override fun onTimeSelected(date: LocalDate) {
